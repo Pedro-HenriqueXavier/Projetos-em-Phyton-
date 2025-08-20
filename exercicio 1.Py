@@ -1,9 +1,9 @@
 #Exercicio 1
-Sistema de estoque com apenas 1 produto
-1. Opção de cadastro do nome do produto.
-2. Opção de retirar produto do estoque (precisa ver se tem o produto)
-3. Opção de adicionar produto no estoque (precisa adicionar um numero maior que 0)
-4. Opção de ver a quantidade no estoque
+#Sistema de estoque com apenas 1 produto
+#1. Opção de cadastro do nome do produto.
+#2. Opção de retirar produto do estoque (precisa ver se tem o produto)
+#3. Opção de adicionar produto no estoque (precisa adicionar um numero maior que 0)
+#4. Opção de ver a quantidade no estoque
 
 def menu():
     print("\n--- Sistema de Estoque ---")
@@ -63,4 +63,5 @@ while True:
     
     else:
         print("Opção inválida! Tente novamente.")
+
     
