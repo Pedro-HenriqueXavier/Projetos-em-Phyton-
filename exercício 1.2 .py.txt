@@ -1,3 +1,12 @@
+#Exercicio 1.2
+#Bilheteria de evento com apenas 1 evento
+#1. Cadastrar nome do evento.
+#2. Vender ingressos (Verificar se há ingressos suficientes).
+#3. Repor ingressos (Quantidade >0).
+#4. Ver ingressos disponíveis.
+
+
+
 def menu():
     print("\n--- Evento ufc 253---")
     print("1 - Nome do evento")
@@ -56,3 +65,4 @@ while True:
     
     else:
         print("Opção inválida! Tente novamente.")
+
