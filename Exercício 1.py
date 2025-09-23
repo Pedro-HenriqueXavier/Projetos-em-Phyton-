@@ -1,4 +1,4 @@
-#Exercicio 1
+.#Exercicio 1
 #Sistema de estoque com apenas 1 produto
 #1. Opção de cadastro do nome do produto.
 #2. Opção de retirar produto do estoque (precisa ver se tem o produto)
@@ -65,3 +65,4 @@ while True:
         print("Opção inválida! Tente novamente.")
 
     
+
