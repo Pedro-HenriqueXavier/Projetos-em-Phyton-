@@ -12,21 +12,31 @@ class Pessoa:
     nome:str
     celular:str
     email:str
-
+    
+lista_pessoas = []
+@dataclass
 class Barbeiro:
     nome:str
     disponibilidade:str
     complemento:str
     horario:str
     corte:str
-
+    
+lista_nome_barbeiros = ["Thiago", "Ademar", "Marcos"]
+@dataclass
 class Agendamento:
     data:str
     hora:str
-    tipodecorte:str
     barbeiro:str
     
-lista = []
+lista_agendamento = ["10h", "11h", "14h", "15h30", "16h"]
+@dataclass
+class Serviços:
+    corte:str
+    barba:str
+    sobrancelha:str
+    
+lista_serviços = ["corte", "barba", "sobrancelha"]
 
 def agendar():
     nome = input("Digite seu nome: ")
@@ -36,7 +46,7 @@ def agendar():
     hora = input("Digite seu horario: ")
     celular = input("Qual seu contato: ")
     cliente_digitado = cliente(nome,email,celular)
-    lista.append(cliente_digita)
+    lista.append(cliente_digitado)
     print("Cadastro realizado com sucesso")
     
 def menu():
@@ -44,14 +54,39 @@ def menu():
     print("2 - Ver serviços")
     print("3 - Preço do serviço ")
     print("4 - Ver horario disponivel")
-    print("5 - Sair")
+    print("5 - Ver clientes cadastrados")
+    print("6 - Sair")
     return input("Escolha uma opção: ")
 #variaveis de controle
 
 
 while True:
     opcao = menu()
-    print(f"{opcao}")
         
     if opcao == "1":
-        agendar()
+        nome = input("Nome do cliente: ")
+        contato = input("Inserir contato: ")
+        email = input("Digite seu email: ")
+        cliente = Pessoa(nome,contato,email)
+        lista_pessoas.append(cliente)
+        data = input("Inserir data: ")
+        hora = input("Digite o horário: ")
+        barbeiro = input("Escolha seu barbeiro: ")
+        servico = input("Tipo de serviço: ")
+        agendamento = Agendamento(data,hora,barbeiro)
+        lista_agendamento.append(agendamento)    
+        print(f"agendamento '{agendamento}' agendado com sucesso!")
+        
+    if opcao == "2":
+        corte = input("Digite o corte: ")
+        barba = input("Barba: ")
+        sobrancelha = input("Sobrancelha: ")
+        print("Serviço confirmado!")
+        
+    if opcao == "3":
+        valor_do_corte=40
+        print(f"O valor do corte é R$ {valor_do_corte},00")
+        valor_da_barba=20
+        print(f"O valor da barba é R$ {valor_da_barba},00")
+        valor_da_sobrancelha=10
+        print(f"O valor da sobrancelha é R$ {valor_da_sobrancelha},00")
