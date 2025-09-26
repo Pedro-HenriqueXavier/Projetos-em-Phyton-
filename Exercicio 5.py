@@ -82,10 +82,21 @@ while True:
         print(f"agendamento '{agendamento}' agendado com sucesso!")
         
     if opcao == "2":
-        corte = input("Corte: ")
-        barba = input("Barba: ")
-        sobrancelha = input("Sobrancelha: ")
-        print("Serviço confirmado!")
+        print("\n--- Serviços ---")
+        
+        print("\n--- Cortes ---")
+        for servico in lista_cortes:
+            print(f"- {servico}")
+        
+        print("\n--- Barbas ---")
+        for servico in lista_barba:
+            print(f"- {servico}")
+            
+        print("\n--- Sobrancelhas ---")
+        for servico in lista_sombrancelha:
+            print(f"- {servico}")
+            
+        print("----------------------------")
         
     if opcao == "3":
         valor_do_corte=40
@@ -113,3 +124,7 @@ while True:
                 
         print("Esses são os clientes cadastrados.")
         
+    if opcao == "6":
+        print("Obrigado pela atenção!")
+        
+    break
